@@ -15,9 +15,9 @@ export default defineConfig({
   //   '/public/page/logo.ico'
   // ],
   proxy: {
-    '/channels': {
+    '/hls': {
       // target: 'https://tp-1400.idp.thinkingdata.cn/',
-      target: 'http://hw-m-l.cztv.com/',
+      target: 'http://gmxw.7766.org:808/',
       changeOrigin: true,
     },
   },

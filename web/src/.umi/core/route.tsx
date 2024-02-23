@@ -19,10 +19,11 @@ if (process.env.NODE_ENV === 'development') {
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"pc/index":{"path":"pc","id":"pc/index"}} as const;
+  const routes = {"video/index":{"path":"video","id":"video/index"},"pc/index":{"path":"pc","id":"pc/index"}} as const;
   return {
     routes,
     routeComponents: {
+'video/index': React.lazy(() => import(/* webpackChunkName: "src__pages__video__index" */'../../../src/pages/video/index.tsx')),
 'pc/index': React.lazy(() => import(/* webpackChunkName: "src__pages__pc__index" */'../../../src/pages/pc/index.tsx')),
 },
   };

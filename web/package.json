@@ -14,11 +14,14 @@
     "@ant-design/icons": "^5.0.1",
     "@ant-design/pro-components": "^2.4.4",
     "@umijs/max": "^4.0.89",
-    "antd": "^5.4.0"
+    "antd": "^5.4.0",
+    "globalthis": "^1.0.3",
+    "webtorrent": "^2.1.36"
   },
   "devDependencies": {
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
+    "@types/webtorrent": "^0.109.7",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",

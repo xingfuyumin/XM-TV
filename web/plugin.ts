@@ -6,6 +6,9 @@ const applyHtmlTemplate = (api: IApi) => {
     $(
       `<script src="//cdn.jsdelivr.net/npm/hls.js@latest"></script>`,
     ).insertAfter('#root');
+    $(
+      `<script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js" as></script>`,
+    ).insertAfter('#root');
     return $;
   });
 };
