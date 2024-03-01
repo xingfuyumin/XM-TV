@@ -11,13 +11,13 @@ export default defineConfig({
   },
   model: {},
   title: 'XM TV',
-  // favicons: [
-  //   '/public/page/logo.ico'
-  // ],
+  favicons: [
+    '/public/page/logo.ico'
+  ],
   proxy: {
-    '/hls': {
-      // target: 'https://tp-1400.idp.thinkingdata.cn/',
-      target: 'http://gmxw.7766.org:808/',
+    '/api': {
+      target: 'http://116.62.78.154:10001',
+      // target: ' http://171.124.177.194:888/',
       changeOrigin: true,
     },
   },

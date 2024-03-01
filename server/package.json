@@ -1,0 +1,38 @@
+{
+  "name": "tant-intl-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "egg-bin dev",
+    "start": "EGG_SERVER_ENV=prod npm run tsc && EGG_WORKERS=2 egg-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://10.27.249.150:8888/zhouxiaoming/tant-intl-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "egg": {
+    "typescript": true,
+    "declarations": true,
+    "tscompiler": "ts-node/register/transpile-only"
+  },
+  "dependencies": {
+    "egg": "3.12.0",
+    "egg-cors": "^2.2.3",
+    "egg-i18n": "^2.1.1",
+    "egg-mysql": "^4.0.0",
+    "egg-scripts": "^2.17.0",
+    "egg-view-nunjucks": "^2.3.0",
+    "http-proxy-middleware": "^2.0.6",
+    "typescript": "4.3.5"
+  },
+  "devDependencies": {
+    "@eggjs/tsconfig": "^1.1.0",
+    "egg-bin": "^5.9.0",
+    "egg-mock": "^5.5.0",
+    "eslint": "^8.31.0",
+    "eslint-config-egg": "^12.1.0"
+  }
+}

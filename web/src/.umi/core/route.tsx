@@ -19,12 +19,12 @@ if (process.env.NODE_ENV === 'development') {
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"video/index":{"path":"video","id":"video/index"},"pc/index":{"path":"pc","id":"pc/index"}} as const;
+  const routes = {"pc/index":{"path":"pc","id":"pc/index","parentId":"@@/global-layout"},"@@/global-layout":{"id":"@@/global-layout","path":"/","isLayout":true}} as const;
   return {
     routes,
     routeComponents: {
-'video/index': React.lazy(() => import(/* webpackChunkName: "src__pages__video__index" */'../../../src/pages/video/index.tsx')),
 'pc/index': React.lazy(() => import(/* webpackChunkName: "src__pages__pc__index" */'../../../src/pages/pc/index.tsx')),
+'@@/global-layout': React.lazy(() => import(/* webpackChunkName: "layouts__index" */'/xmzhou/XM-TV/web/src/layouts/index.tsx')),
 },
   };
 }

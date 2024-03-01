@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import './index.less';
 
 const Index: React.FC = () => {
   const videoRef = useRef(null);
@@ -7,7 +8,7 @@ const Index: React.FC = () => {
     const video = videoRef.current as any;
     if (Hls.isSupported() && video) {
       const hls = new Hls();
-      hls.loadSource('/hls/94/index.m3u8');
+      hls.loadSource('/api/v1/live/1f635788-d6ee-11ee-8c44-0242ac110002/m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function () {
         console.log('video and hls.js are now bound together !');
@@ -15,7 +16,7 @@ const Index: React.FC = () => {
     }
   }, []);
   return (
-    <video ref={videoRef} width={400} height={300} controls autoPlay/>
+    <video ref={videoRef} controls autoPlay/>
   );
 };
 

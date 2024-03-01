@@ -1,1 +1,7 @@
 web/node_modules
+*/.umi
+server/node_modules
+server/typings
+server/log
+server/logs
+server/run
