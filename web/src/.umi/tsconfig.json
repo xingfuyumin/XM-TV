@@ -27,7 +27,7 @@
         "src/.umi/*"
       ],
       "@umijs/max": [
-        "/xmzhou/XM-TV/web/node_modules/umi"
+        "/Users/zhou/Desktop/github/XM-TV/web/node_modules/umi"
       ],
       "@umijs/max/typings": [
         "src/.umi/typings"

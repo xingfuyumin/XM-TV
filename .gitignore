@@ -1,5 +1,5 @@
 web/node_modules
-*/.umi
+web/src/.umi
 server/node_modules
 server/typings
 server/log

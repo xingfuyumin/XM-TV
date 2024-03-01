@@ -8,7 +8,7 @@ const Index: React.FC = () => {
     const video = videoRef.current as any;
     if (Hls.isSupported() && video) {
       const hls = new Hls();
-      hls.loadSource('/api/v1/live/1f635788-d6ee-11ee-8c44-0242ac110002/m3u8');
+      hls.loadSource('https://live-play.cctvnews.cctv.com/cctv/merge_cctv13.m3u8?auth_key=1635962688');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function () {
         console.log('video and hls.js are now bound together !');

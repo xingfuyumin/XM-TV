@@ -11,11 +11,10 @@ const Menus = [
     label: '电视直播',
   }
 ];
-console.log(111);
 const Index: React.FC = () => {
   return (
     <Layout className={styles.root}>
-      <Header className={styles.header}>
+      <Header className={styles.header} theme="light">
         <img className={styles.logo} src={Logo} />
         <Menu
           mode="horizontal"

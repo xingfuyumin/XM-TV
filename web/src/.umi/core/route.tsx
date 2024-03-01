@@ -24,7 +24,7 @@ export async function getRoutes() {
     routes,
     routeComponents: {
 'pc/index': React.lazy(() => import(/* webpackChunkName: "src__pages__pc__index" */'../../../src/pages/pc/index.tsx')),
-'@@/global-layout': React.lazy(() => import(/* webpackChunkName: "layouts__index" */'/xmzhou/XM-TV/web/src/layouts/index.tsx')),
+'@@/global-layout': React.lazy(() => import(/* webpackChunkName: "layouts__index" */'/Users/zhou/Desktop/github/XM-TV/web/src/layouts/index.tsx')),
 },
   };
 }

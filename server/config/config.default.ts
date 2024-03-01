@@ -28,7 +28,7 @@ export default (appInfo) => {
   };
   config.mysql = {
     client: {
-      host: '127.0.0.1',
+      host: '116.62.78.154',
       port: '3306',
       user: 'xm_tv',
       password: 'xmzhou@xm_tv',
