@@ -17,7 +17,7 @@ const Index: React.FC = () => {
   return (
     <div className={classNames(styles.root, isPc ? styles.pc : null)}>
       <Spin spinning={loading}>
-        <video ref={videoRef} controls autoPlay className={styles.video} />
+        <video ref={videoRef} controls autoPlay className={styles.video}/>
         <LiveList
           liveList={liveList}
           liveKey={liveKey}

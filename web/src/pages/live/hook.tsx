@@ -17,7 +17,8 @@ export default () => {
   const liveKey = searchParams.get('key') || '';
   const handleLiveKeyChange = (v: string) => {
     searchParams.set('key', v);
-    setSearchParams(searchParams);
+    setSearchParams(searchParams, { replace: true });
+    videoRef.current?.scrollIntoView();
   }
   useEffect(() => {
     const Hls = (window as any).Hls;

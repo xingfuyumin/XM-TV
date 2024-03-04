@@ -1,5 +1,5 @@
 import { history } from "@umijs/max";
 
 export default () => {
-  history.push('/live');
+  history.replace('/live');
 }

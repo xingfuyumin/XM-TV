@@ -13,7 +13,7 @@ export default () => {
   }, [pathname]);
 
   const handleMenuSelect = ({ itemKey }: OnSelectedData) => {
-    history.push(`/${itemKey}`);
+    history.replace(`/${itemKey}`);
   }
   const handleDarkModeChange = () => {
     const body = document.body;
