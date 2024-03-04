@@ -1,12 +1,22 @@
 .root {
   height: 100%;
   :global {
+    .semi-navigation-horizontal .semi-navigation-header {
+      margin-right: 0px;
+    }
     .semi-layout-content {
       padding: 24px;
       background: var(--semi-color-bg-1);
       flex-grow: 1;
       height: 0;
       overflow: auto;
+    }
+    .semi-navigation-horizontal {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    .semi-navigation-item {
+      margin-right: 0 !important;
     }
 
     ::-webkit-scrollbar {

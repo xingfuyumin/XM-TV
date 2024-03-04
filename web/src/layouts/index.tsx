@@ -12,7 +12,7 @@ const { Header, Content } = Layout;
 const Menus = [
   {
     itemKey: 'live',
-    text: '电视直播',
+    text: '直播',
   },
   {
     itemKey: 'tv',
