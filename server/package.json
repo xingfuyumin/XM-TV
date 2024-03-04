@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "egg-bin dev",
+    "tsc": "tsc -p tsconfig.json",
     "start": "EGG_SERVER_ENV=prod npm run tsc && EGG_WORKERS=2 egg-scripts start"
   },
   "repository": {
