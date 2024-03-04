@@ -1,5 +1,5 @@
+import { Toast } from "@douyinfe/semi-ui";
 import umiRequest, { RequestOptionsInit, RequestResponse } from "umi-request";
-import { message } from "antd";
 
 interface Request extends RequestOptionsInit {
   url: string;
@@ -18,7 +18,7 @@ export default async (request: Request) => {
     })
     .catch((res: RequestResponse) => {
       if (res?.response?.status !== 200) {
-        message.error(res.data?.msg || res.toString());
+        Toast.error(res.data?.msg || res.toString());
       }
       throw new Error("");
     });

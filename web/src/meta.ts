@@ -8,9 +8,5 @@ export default {
             url: addPrefix("/lives"),
             method: "GET",
         },
-        m3u8: {
-            url: addPrefix("/live"),
-            method: "GET",
-        },
     },
 };

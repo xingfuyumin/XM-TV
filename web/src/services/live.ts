@@ -5,10 +5,10 @@ export interface LIVE_INFO {
   id: string;
   name: string;
   class: string;
+  src: string;
 }
 
-export const queryLiveList = (): Promise<LIVE_INFO[]> =>
-  request({
+export const queryLiveList = (): Promise<any> => request({
     ...list,
   });
 

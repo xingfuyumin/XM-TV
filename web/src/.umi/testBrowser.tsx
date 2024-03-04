@@ -9,7 +9,7 @@ import { createPluginManager } from './core/plugin';
 import { getRoutes } from './core/route';
 import type { Location } from 'history';
 
-
+import '/Users/zhou/Desktop/github/XM-TV/web/src/global.less';
 const publicPath = '/';
 const runtimePublicPath = false;
 

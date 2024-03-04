@@ -13,8 +13,10 @@
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@ant-design/pro-components": "^2.4.4",
+    "@douyinfe/semi-icons": "^2.53.2",
+    "@douyinfe/semi-ui": "^2.53.2",
     "@umijs/max": "^4.0.89",
-    "antd": "^5.4.0",
+    "ahooks": "^3.7.10",
     "globalthis": "^1.0.3",
     "umi-request": "^1.4.0",
     "webtorrent": "^2.1.36"

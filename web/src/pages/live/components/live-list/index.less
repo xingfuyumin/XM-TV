@@ -1,0 +1,31 @@
+.list {
+  margin-top: 24px;
+}
+.item {
+  cursor: pointer;
+  border: 1px solid var(--semi-color-border);
+  border-bottom: 1px solid var(--semi-color-border) !important;
+  padding: 6px 4px !important;
+  border-radius: 4px;
+  &:hover {
+    background-color: var(--semi-color-fill-0);
+  }
+}
+
+.active {
+  background: var(--semi-color-primary-light-default);
+  border-color: var(--semi-color-primary);
+  border-bottom: 1px solid var(--semi-color-primary) !important;
+  &:hover {
+    background: var(--semi-color-primary-light-default);
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  background: var(--semi-color-fill-0);
+  color: var(--semi-color-disabled-text);
+  &:hover {
+    background: var(--semi-color-fill-0);
+  }
+}
