@@ -10,7 +10,7 @@ export default defineConfig({
     dataField: 'data',
   },
   model: {},
-  title: 'XM TV',
+  title: '小明影视',
   favicons: [
     '/public/page/logo.ico'
   ],

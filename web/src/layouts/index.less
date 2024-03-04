@@ -4,6 +4,39 @@
     .semi-layout-content {
       padding: 24px;
       background: var(--semi-color-bg-1);
+      flex-grow: 1;
+      height: 0;
+      overflow: auto;
     }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-corner {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 6px;
+      background: transparent;
+      -webkit-transition: all 1s;
+      transition: all 1s;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--semi-color-fill-1);
+    }
+    .semi-layout-content:hover::-webkit-scrollbar-thumb {
+      background: var(--semi-color-fill-2);
+    }
+  }
+  .logo {
+    width: 130px;
   }
 }

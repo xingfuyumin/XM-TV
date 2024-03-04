@@ -1,10 +1,12 @@
 import { LIVE_INFO, queryLiveList } from "@/services/live";
+import usePc from "@/utils/hooks/usePc";
 import { useSearchParams } from "@umijs/max";
 import { useRequest } from "ahooks";
 import { useEffect, useRef } from "react";
 
 export default () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const isPc = usePc();
   const hlsRef = useRef<any>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const { data: liveList, loading } = useRequest(() => queryLiveList(), {
@@ -31,6 +33,8 @@ export default () => {
       if (src) {
         hlsRef.current.loadSource(src);
         hlsRef.current.attachMedia(video);
+      } else if (liveList?.filter((d: LIVE_INFO) => d.src).length) {
+        handleLiveKeyChange(liveList?.find((d: LIVE_INFO) => d.src)[0]);
       }
     }
   }, [liveKey, liveList]);
@@ -40,5 +44,6 @@ export default () => {
     loading,
     videoRef,
     handleLiveKeyChange,
+    isPc,
   };
 }

@@ -10,11 +10,12 @@ const { TabPane } = Tabs;
 type Props = {
   liveKey: string,
   liveList: LIVE_INFO[],
+  isPc: boolean,
   onLiveKeyChange: (v: string) => void,
 }
 
 const Index: FC<Props> = ({
-  liveKey, liveList, onLiveKeyChange,
+  liveKey, liveList, isPc, onLiveKeyChange,
 }) => {
   const {
     group,
@@ -37,15 +38,15 @@ const Index: FC<Props> = ({
         )}
         onClick={() => item.src ? onLiveKeyChange(item.id) : null}
       >{item.name}</List.Item>}
-      grid={{
-        gutter: 12,
+      grid={isPc ? undefined : {
+        gutter: 24,
         span: 8,
       }}
     />
   };
   return (
     <Tabs
-      className={styles.root}
+      className={isPc ? styles.pc : styles.root}
       activeKey={group}
       onChange={setGroup}
     >

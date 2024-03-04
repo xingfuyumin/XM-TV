@@ -1,3 +1,4 @@
+import usePc from "@/utils/hooks/usePc";
 import { OnSelectedData } from "@douyinfe/semi-ui/lib/es/navigation";
 import { history, useLocation } from "@umijs/max";
 import { useLocalStorageState } from "ahooks";
@@ -5,7 +6,8 @@ import { useEffect, useMemo } from "react";
 
 export default () => {
   const { pathname } = useLocation();
-  const [ dark, setDark ] = useLocalStorageState('theme-mode', { defaultValue: false });
+  const isPc = usePc();
+  const [ dark, setDark ] = useLocalStorageState('theme-mode', { defaultValue: true });
   const menyKey = useMemo(() => {
     return pathname.split('/')[1] || '';
   }, [pathname]);
@@ -36,5 +38,6 @@ export default () => {
     isDark: dark,
     handleMenuSelect,
     handleDarkModeChange,
+    isPc,
   };
 }

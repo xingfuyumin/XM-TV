@@ -5,6 +5,7 @@ import Logo from '@/assets/logo.png';
 import { Button, Layout, Nav } from '@douyinfe/semi-ui';
 import useData from './hook';
 import { IconMoon, IconSun } from '@douyinfe/semi-icons';
+import classNames from 'classnames'
 
 const { Header, Content } = Layout;
 
@@ -26,11 +27,11 @@ const Menus = [
 ];
 const Index: React.FC = () => {
   const {
-    menyKey, isDark,
+    menyKey, isDark, isPc,
     handleMenuSelect, handleDarkModeChange,
   } = useData();
   return (
-    <Layout className={styles.root}>
+    <Layout className={classNames(styles.root, isPc ? styles.pc : null)}>
       <Header className={styles.header}>
         <Nav
           mode="horizontal"

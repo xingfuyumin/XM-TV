@@ -1,35 +1,58 @@
-	// //全屏按钮
-    // video::-webkit-media-controls-fullscreen-button {
-    //     display: none;
-    // }
-    // //播放按钮
-    // video::-webkit-media-controls-play-button {
-    //     display: none;
-    // }
-    //进度条
-    video::-webkit-media-controls-timeline {
-        display: none;
+.video {
+    border-radius: 4px;
+    width: 100%;
+
+    :global {
+
+        // //全屏按钮
+        // ::-webkit-media-controls-fullscreen-button {
+        //     display: none;
+        // }
+        // //播放按钮
+        // ::-webkit-media-controls-play-button {
+        //     display: none;
+        // }
+        //进度条
+        ::-webkit-media-controls-timeline {
+            display: none;
+        }
+
+        //观看的当前时间
+        ::-webkit-media-controls-current-time-display {
+            display: none;
+        }
+
+        //剩余时间
+        ::-webkit-media-controls-time-remaining-display {
+            display: none;
+        }
+
+        // //音量按钮
+        // ::-webkit-media-controls-mute-button {
+        //     display: none;            
+        // }
+        // ::-webkit-media-controls-toggle-closed-captions-button {
+        //     display: none;            
+        // }
+        // //音量的控制条
+        // ::-webkit-media-controls-volume-slider {
+        //     display: none;            
+        // }
     }
-    //观看的当前时间
-    video::-webkit-media-controls-current-time-display{
-        display: none;            
+}
+.pc {
+    height: 100%;
+    :global {
+        .semi-spin-children {
+            display: flex;
+            height: 100%;
+        }
+        .semi-spin {
+            height: 100%;
+        }
     }
-    //剩余时间
-    video::-webkit-media-controls-time-remaining-display {
-        display: none;            
+    .video {
+        flex-grow: 1;
+        width: 0;
     }
-    // //音量按钮
-    // video::-webkit-media-controls-mute-button {
-    //     display: none;            
-    // }
-    // video::-webkit-media-controls-toggle-closed-captions-button {
-    //     display: none;            
-    // }
-    // //音量的控制条
-    // video::-webkit-media-controls-volume-slider {
-    //     display: none;            
-    // }
-    video {
-        border-radius: 4px;
-        width: 100%;
-    }
+}
